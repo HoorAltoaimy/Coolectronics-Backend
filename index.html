@@ -1,12 +1,18 @@
 <!-- index.html -->
 
 <!DOCTYPE html>
+<!--Use the lang attribute to specify the language of the page. This is important for screen readers, 
+  which can use the language information to select the appropriate voice and pronunciation for the content.-->
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Provide a brief summary of the page's content-->
+  <meta name="description" content="this website is about anisul islam's portfolio" />
+  <!-- to ensure that your page is properly displayed on all devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="dist/style.css">
+  <!--This title will be displayed in search results and in the browser tab, so it is important to make it meaningful and informative.-->
   <title>SCSS Project</title>
 </head>
 
@@ -26,10 +32,13 @@
 
   <img src="images\j27.png" alt="logo" title="HT Jewelles logo"/>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Categories</a>
-    <a href="#">Cart</a>
+  <!--(role / aria-label) to identify the purpose of an element and to provide additional information about it.-->
+  <nav role="navigation" aria-label="menu bar"> 
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Cart</a></li>
+    </ul>
   </nav>
 </header>
 
@@ -42,43 +51,59 @@
   <h2>
     Shine bright with HT Jewelles.
   </h2>
+  <div>
+    <h3>
+      Discover our exquisite collection of jewellery for every occasion.
+    </h3>
 
-  <h3>
-    Discover our exquisite collection of jewellery for every occasion.
-  </h3>
-
-  <button type="button"> 
-    Shop Now 
-  </button>
+    <button type="button"> 
+      Shop Now 
+    </button>
+  </div>
 </section>
-
 
 <!--A product showcase section with images, titles, and brief descriptions of featured products.-->
 <section>
-  <img src="images\tennis necklace.jpg" alt="tennis necklace" title="tennis necklace" width="300" height="300"/>
-  <p>TENNIS NECKLACE</p>
-  <p>A signature fine yellow gold necklace with bright moissanite stones</p>
+  <div class="card">
+    <img src="images\tennis necklace.jpg" alt="tennis necklace" title="tennis necklace" width="300" height="300"/>
+    <div class="product-content">
+      <h4>TENNIS NECKLACE</h4>
+      <p>A signature fine yellow gold necklace with bright moissanite stones</p>
+    </div>
+  </div>
 
   <br>
   <br>
 
-  <img src="images\tennis bracelet.jpg" alt="tennis bracelet" title="tennis bracelet" width="300" height="300"/>
-  <p>TENNIS BRACELET</p>
-  <p>A signature fine yellow gold bracelet with bright moissanite stones</p>
+  <div class="card">
+    <img src="images\tennis bracelet.jpg" alt="tennis bracelet" title="tennis bracelet" width="300" height="300"/>
+    <div class="product-content">
+      <h4>TENNIS BRACELET</h4>
+      <p>A signature fine yellow gold bracelet with bright moissanite stones</p>
+    </div>
+  </div>
 
   <br>
   <br>
 
-  <img src="images\ring.jpg" alt="oval cut ring" title="oval cut ring" width="300" height="300"/>
-  <p>OVAL CUT RING</p>
-  <p>A fine yellow gold ring with the perfect oval cut</p>
+  <div class="card">
+    <img src="images\ring.jpg" alt="oval cut ring" title="oval cut ring" width="300" height="300"/>
+    <div class="product-content">
+      <h4>OVAL CUT RING</h4>
+      <p>A fine yellow gold ring with the perfect oval cut</p>
+    </div>
+  </div>
 
   <br>
   <br>
 
-  <img src="images\earrings.jpg" alt="gold hoops earrings" title="gold hoops earrings" width="300" height="300"/>
-  <p>GOLD HOOPS EARRINGS</p>
-  <p>A signature fine yellow gold hoops earrings with bright moissanite stones</p>
+  <div class="card">
+    <img src="images\earrings.jpg" alt="gold hoops earrings" title="gold hoops earrings" width="300" height="300"/>
+    <div class="product-content">
+      <h4>GOLD HOOPS EARRINGS</h4>
+      <p>A signature fine yellow gold hoops earrings with bright moissanite stones</p>
+    </div>
+  </div>
 </section>
 
 <br>
@@ -87,8 +112,8 @@
 <!--Customer reviews.-->
 <section>
   <h4>Your opinion matters! </h4>
-  <label for="review">Write your review here:</label>
   <form action="#">
+    <label for="review">Write your review here:</label>
     <textarea name="review" id="review"></textarea>
     <input type="submit" value="Submit" />
   </form>
@@ -107,11 +132,13 @@
 <br>
 
 <footer>
-  <nav>
-    <a href="#">About</a>
+  <nav role="navigation">
+    <ul>
+    <li><a href="#">About</a></li>
+    </ul>
   </nav>
 
-  <secti>
+  <section>
     <p><b>Don't hesitate to contact us via our email:</b></p>
     <p>contact@htjewelles.com</p>
 
