@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
 }
 
@@ -6,6 +6,126 @@ body {
   background-color: #3498db;
   color: white;
   padding: 1rem;
-}
+} */
 
 /*# sourceMappingURL=style.css.map */
+/* ----------------------------------------------------------- */
+
+/*-----universal------*/
+*{
+  box-sizing: content-box; /* or border-box*/
+  margin: auto;
+}
+
+/*-----header-----*/
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgb(221,142,142);
+  background: linear-gradient(90deg, rgba(221,142,142,1) 0%, rgba(187,119,119,1) 31%, rgba(145,76,90,1) 100%);
+  height: 30vh;
+  
+}
+
+.logo{
+  position: relative;
+  left: 1rem;
+  top: 4rem;
+}
+.name{
+  position: relative;
+  left: 6rem;
+  top: 0.4rem;
+
+}
+.nav-bar{
+  position: relative;
+  left: 1rem;
+  top: 3rem;
+}
+
+h1{
+  color: rgb(74, 40, 40);
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px rgb(231, 196, 196);
+}
+
+.menu-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 15px;
+}
+.menu-list li{
+  display: inline-block;
+  margin-right: 10px;
+}
+a {
+  color: rgb(74, 40, 40);
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(146, 85, 85); 
+}
+
+
+/*-----main------*/
+main{
+  background-color: #f9f9f9;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-section{
+  padding-top: 2rem;
+  padding-left: 2rem;
+  font-family: 'Cinzel', serif;
+  height: 20vh;
+  background: rgb(249,249,249);
+  background: linear-gradient(90deg, rgba(249,249,249,1) 0%, rgba(244,229,229,1) 31%, rgba(255,222,229,1) 100%);
+}
+
+h2{
+  font-size: 1.5rem;
+  color: rgb(74, 40, 40);
+  /* display: flex;
+  justify-content: center; */
+}
+
+.hero-div{
+  padding-top: 0.5rem;
+  line-height: 2rem;
+  font-size: 0.9rem;
+  color: rgb(74, 40, 40);
+ 
+  /*fix the layout*/
+  display: flex;
+  justify-content: left;
+}
+  
+.shop-btn {
+  background-image: linear-gradient(to right, #e6acac 0%, #8f5959 51%, #693636  100%);
+  margin: 10px;
+  padding: 10px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(74, 40, 40);        
+  border-radius: 10px;
+  
+}
+.shop-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration:none;
+}
+
+
+
+/*-----footer-----*/

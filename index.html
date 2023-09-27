@@ -12,8 +12,12 @@
   <!-- to ensure that your page is properly displayed on all devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="dist/style.css">
+  <!--Google fonts links-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <!--This title will be displayed in search results and in the browser tab, so it is important to make it meaningful and informative.-->
-  <title>SCSS Project</title>
+  <title>HT Jewelles</title>
 </head>
 
 <body>
@@ -26,15 +30,18 @@
 
 <!--A header section with a logo and navigation menu.-->
 <header>
-  <h1>
-    HT Jewelles
-  </h1>
-
-  <img src="images\j27.png" alt="logo" title="HT Jewelles logo"/>
+  <div class="logo">
+    <img src="images\j19.png" alt="logo" title="HT Jewelles logo" width="70" height="70"/>
+  </div>
+  <div class="name">
+    <h1>
+      HT Jewelles
+    </h1>
+  </div>
 
   <!--(role / aria-label) to identify the purpose of an element and to provide additional information about it.-->
-  <nav role="navigation" aria-label="menu bar"> 
-    <ul>
+  <nav class="nav-bar" role="navigation" aria-label="menu bar"> 
+    <ul class="menu-list">
       <li><a href="#">Home</a></li>
       <li><a href="#">Categories</a></li>
       <li><a href="#">Cart</a></li>
@@ -42,94 +49,88 @@
   </nav>
 </header>
 
-<br>
-<hr>
-<br>
-
 <!--A hero section with a catchy headline, subheading, and a call-to-action button.-->
-<section>
-  <h2>
-    Shine bright with HT Jewelles.
-  </h2>
-  <div>
-    <h3>
-      Discover our exquisite collection of jewellery for every occasion.
-    </h3>
+<main>
+  <section class="hero-section">
+    <h2>
+      Shine bright with HT Jewelles.
+    </h2>
+    <div class="hero-div">
+      <h3>
+        Discover our exquisite collection of jewellery for every occasion.
+      </h3>
 
-    <button type="button"> 
-      Shop Now 
-    </button>
-  </div>
-</section>
-
-<!--A product showcase section with images, titles, and brief descriptions of featured products.-->
-<section>
-  <div class="card">
-    <img src="images\tennis necklace.jpg" alt="tennis necklace" title="tennis necklace" width="300" height="300"/>
-    <div class="product-content">
-      <h4>TENNIS NECKLACE</h4>
-      <p>A signature fine yellow gold necklace with bright moissanite stones</p>
+      <button type="button" class="shop-btn"> 
+        Shop Now >
+      </button>
     </div>
-  </div>
+  </section>
 
-  <br>
-  <br>
-
-  <div class="card">
-    <img src="images\tennis bracelet.jpg" alt="tennis bracelet" title="tennis bracelet" width="300" height="300"/>
-    <div class="product-content">
-      <h4>TENNIS BRACELET</h4>
-      <p>A signature fine yellow gold bracelet with bright moissanite stones</p>
+  <!--A product showcase section with images, titles, and brief descriptions of featured products.-->
+  <section>
+    <div class="card">
+      <img src="images\tennis necklace.jpg" alt="tennis necklace" title="tennis necklace" width="300" height="300"/>
+      <div class="product-content">
+        <h4>TENNIS NECKLACE</h4>
+        <p>A signature fine yellow gold necklace with bright moissanite stones</p>
+      </div>
+      <button type="button" class="add-to-cart"> 
+        add
+      </button>
     </div>
-  </div>
 
-  <br>
-  <br>
-
-  <div class="card">
-    <img src="images\ring.jpg" alt="oval cut ring" title="oval cut ring" width="300" height="300"/>
-    <div class="product-content">
-      <h4>OVAL CUT RING</h4>
-      <p>A fine yellow gold ring with the perfect oval cut</p>
+    <div class="card">
+      <img src="images\tennis bracelet.jpg" alt="tennis bracelet" title="tennis bracelet" width="300" height="300"/>
+      <div class="product-content">
+        <h4>TENNIS BRACELET</h4>
+        <p>A signature fine yellow gold bracelet with bright moissanite stones</p>
+        </div>
+        <button type="button" class="add-to-cart"> 
+          add
+        </button>
     </div>
-  </div>
 
-  <br>
-  <br>
-
-  <div class="card">
-    <img src="images\earrings.jpg" alt="gold hoops earrings" title="gold hoops earrings" width="300" height="300"/>
-    <div class="product-content">
-      <h4>GOLD HOOPS EARRINGS</h4>
-      <p>A signature fine yellow gold hoops earrings with bright moissanite stones</p>
+    <div class="card">
+      <img src="images\ring.jpg" alt="oval cut ring" title="oval cut ring" width="300" height="300"/>
+      <div class="product-content">
+        <h4>OVAL CUT RING</h4>
+        <p>A fine yellow gold ring with the perfect oval cut</p>
+      </div>
+      <button type="button" class="add-to-cart"> 
+        add
+      </button>
     </div>
-  </div>
-</section>
 
-<br>
-<br>
+    <div class="card">
+      <img src="images\earrings.jpg" alt="gold hoops earrings" title="gold hoops earrings" width="300" height="300"/>
+      <div class="product-content">
+        <h4>GOLD HOOPS EARRINGS</h4>
+        <p>A signature fine yellow gold hoops earrings with bright moissanite stones</p>
+      </div>
+      <button type="button" class="add-to-cart"> 
+        add
+      </button>
+    </div>
+  </section>
 
-<!--Customer reviews.-->
-<section>
-  <h4>Your opinion matters! </h4>
-  <form action="#">
-    <label for="review">Write your review here:</label>
-    <textarea name="review" id="review"></textarea>
-    <input type="submit" value="Submit" />
-  </form>
-</section>
+  <!--Customer reviews.-->
+  <section>
+    <h4>Your opinion matters! </h4>
+    <form action="#">
+      <label for="review">Write your review here:</label>
+      <textarea name="review" id="review"></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+  </section>
 
-<!--Newsletter subscription form.-->
-<section>
-  <h4>Subscribe to our newsletter so you don't miss speical offers!</h4>
-  <label for="email">Your Email:</label>
-  <input type="text" name="email" id="email" />
-  <input type="submit" value="Subscribe" />
-</section>
-
-<br>
-<hr>
-<br>
+  <!--Newsletter subscription form.-->
+  <section>
+    <h4>Subscribe to our newsletter so you don't miss speical offers!</h4>
+    <label for="email">Your Email:</label>
+    <input type="text" name="email" id="email" />
+    <input type="submit" value="Subscribe" />
+  </section>
+</main>
 
 <footer>
   <nav role="navigation">
