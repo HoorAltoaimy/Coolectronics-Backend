@@ -1,13 +1,318 @@
-// src/styles/style.scss
+/*-----import partial files-----*/
 
-$primary-color: #3498db;
+//forward the entire reset code to here
+@forward 'reset';
+//use the variables from another partial file
+@use 'variables';
 
-body {
-  font-family: Arial, sans-serif;
+//mixins
+@mixin gradBackground{
+  background: rgb(221,142,142);
+  background: linear-gradient(90deg, rgba(221,142,142,1) 0%, rgba(187,119,119,1) 31%, rgba(145,76,90,1) 100%);
 }
 
-.header {
-  background-color: $primary-color;
-  color: white;
-  padding: 1rem;
+/*-----header-----*/
+header{
+  position: sticky;
+  top: 0;
+  // width: 100%;
+  @include gradBackground();
+  height: 15vh;
+  
+  display: flex;
+
+  .logo{
+    margin-top: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 0.1rem;
+  }
+  .name{
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    margin-top: 1.9rem;
+  }
+  h1{
+    color: variables.$main-color;
+    font-family: variables.$main-font;
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 0px 0px 5px rgb(231, 196, 196);
+  }
+  .nav-bar{
+    margin-right: 2rem;
+    margin-top: 3.6rem;
+    margin-left: 50rem;
+
+    .menu-list{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li{
+        display: inline-block;
+        margin-right: 20px;
+
+        a {
+          color: variables.$main-color;
+          font-family: 'Cinzel', serif;
+          font-size: 1rem;
+          font-weight: 600;
+          text-decoration: none;
+
+          &:hover {
+            color: variables.$link-hover-color; 
+          }
+        }      
+      }
+    }
+  }
+}
+
+/*-----main------*/
+main{
+  background-color: variables.$body-color;
+  font-family: variables.$body-font;
+  color: variables.$main-color;
+}
+
+/*hero section*/
+.hero-section{
+  height: 35vh;
+  padding-top: 4.5rem;
+  font-family: variables.$main-font;
+  background: rgb(249,249,249);
+  background: linear-gradient(90deg, rgba(249,249,249,1) 0%, rgba(244,229,229,1) 31%, rgba(255,222,229,1) 100%);
+
+  .hero-section-title{
+    font-size: 1.5rem;
+    color: variables.$main-color;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-section-p{  
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: variables.$main-color;
+  } 
+  .shop-btn {
+    @include gradBackground();;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: variables.$main-color;        
+    border-radius: 10px;
+    padding: 10px 20px;
+    
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center; 
+
+    &:hover {
+      background-position: right center;
+      color: variables.$btn-hover-color;
+    }
+  } 
+}
+
+/*products section*/
+.product-title{
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  color: variables.$main-color;
+  font-family: variables.$main-font;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px rgb(224, 176, 176);
+}
+.products{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  .p-name{
+    font-weight: 900;
+  }
+  
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(42, 15, 15, 0.2);
+    transition: 0.3s;
+    width: 30%;
+    height: 330px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 0.3rem;
+    padding-right: 0.2rem;
+    line-height: 1.5rem;
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(107, 68, 68, 0.5);
+    }
+    .add-btn {
+      @include gradBackground();
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 10px;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: rgb(74, 40, 40);        
+      border-radius: 10px;
+      padding: 5px 10px;
+    
+      &:hover {
+        background-position: right center;
+        color: variables.$btn-hover-color;
+        text-decoration:none;
+      }
+    }
+  }
+}
+
+/*review section*/
+.review-div1{
+  display: flex;
+
+  .review-heading{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+    font-family: 'Cinzel', serif;
+  }
+}
+
+.review-div2{
+  display: flex;
+
+  form{
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+
+    label{
+      margin-right: 1rem;
+    }
+    textarea{
+      margin-right: 1rem;
+      width: 200px;
+      height: 100px;
+    }
+    input[type='submit']{
+      margin-right: 1rem;
+      @include gradBackground();
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 10px;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: variables.$main-color;        
+      border-radius: 10px;
+      padding: 5px 10px;
+
+      &:hover {
+        background-position: right center;
+        color: variables.$btn-hover-color;
+      }
+    }
+  }
+}
+
+/*email subscribtion section*/
+.email-div1{
+  display: flex;
+
+  .email-heading{
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-family: 'Cinzel', serif;
+  }
+}
+
+.email-div2{
+  display: flex;
+  padding-bottom: 2rem;
+
+  label{
+    margin-left: 1rem;
+    margin-right: 0.2rem;
+  }
+  input[type='text']{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  input[type='submit']{
+    margin-left: 1rem;
+    @include gradBackground();
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: variables.$main-color;        
+    border-radius: 10px;
+    padding: 5px 10px;
+
+    &:hover {
+      background-position: right center;
+      color: variables.$btn-hover-color;
+      text-decoration:none;
+    }
+  }
+}
+
+/*-----footer-----*/
+footer{
+  @include gradBackground();
+  display: flex;
+}
+
+.about-nav{
+    margin-left: 1rem; 
+    margin-right: 2rem;
+}
+
+.about-list li a {
+  color: variables.$main-color;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: variables.$link-hover-color; 
+  }
+}
+
+.contact-div{
+  margin-left: 30rem;
+  line-height: 2rem;
+  padding-top: 2rem;
+}
+
+.pages-div{
+  margin-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+.pages-list{
+  padding-top: 1rem;
+  padding-left: 0;
+
+  li{
+    display: inline-block;
+    margin-right: 50px;
+  }
+}
+
+/*-----media query-----*/
+@media (max-width: 768px) {
+  *{
+    flex-direction: column;
+  }
 }

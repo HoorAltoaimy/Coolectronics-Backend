@@ -1,0 +1,304 @@
+/*-----import partial files-----*/
+/*-----universal-----*/
+/*-----universal-----*/
+* {
+  padding: 0;
+  margin: auto;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+/*-----sass variables-----*/
+/*-----header-----*/
+header {
+  position: sticky;
+  top: 0;
+  background: rgb(221, 142, 142);
+  background: linear-gradient(90deg, rgb(221, 142, 142) 0%, rgb(187, 119, 119) 31%, rgb(145, 76, 90) 100%);
+  height: 15vh;
+  display: flex;
+}
+header .logo {
+  margin-top: 1.3rem;
+  margin-left: 1rem;
+  margin-right: 0.1rem;
+}
+header .name {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-top: 1.9rem;
+}
+header h1 {
+  color: rgb(74, 40, 40);
+  font-family: "Cinzel", serif;
+  font-size: 3rem;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px rgb(231, 196, 196);
+}
+header .nav-bar {
+  margin-right: 2rem;
+  margin-top: 3.6rem;
+  margin-left: 50rem;
+}
+header .nav-bar .menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+header .nav-bar .menu-list li {
+  display: inline-block;
+  margin-right: 20px;
+}
+header .nav-bar .menu-list li a {
+  color: rgb(74, 40, 40);
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+header .nav-bar .menu-list li a:hover {
+  color: rgb(236, 186, 186);
+}
+
+/*-----main------*/
+main {
+  background-color: #f9f9f9;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(74, 40, 40);
+}
+
+/*hero section*/
+.hero-section {
+  height: 35vh;
+  padding-top: 4.5rem;
+  font-family: "Cinzel", serif;
+  background: rgb(249, 249, 249);
+  background: linear-gradient(90deg, rgb(249, 249, 249) 0%, rgb(244, 229, 229) 31%, rgb(255, 222, 229) 100%);
+}
+.hero-section .hero-section-title {
+  font-size: 1.5rem;
+  color: rgb(74, 40, 40);
+  display: flex;
+  justify-content: center;
+}
+.hero-section .hero-section-p {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: rgb(74, 40, 40);
+}
+.hero-section .shop-btn {
+  background: rgb(221, 142, 142);
+  background: linear-gradient(90deg, rgb(221, 142, 142) 0%, rgb(187, 119, 119) 31%, rgb(145, 76, 90) 100%);
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(74, 40, 40);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.hero-section .shop-btn:hover {
+  background-position: right center;
+  color: #fff;
+}
+
+/*products section*/
+.product-title {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  color: rgb(74, 40, 40);
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px rgb(224, 176, 176);
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.products .p-name {
+  font-weight: 900;
+}
+.products .card {
+  box-shadow: 0 4px 8px 0 rgba(42, 15, 15, 0.2);
+  transition: 0.3s;
+  width: 30%;
+  height: 330px;
+  border-radius: 10px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 0.3rem;
+  padding-right: 0.2rem;
+  line-height: 1.5rem;
+}
+.products .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(107, 68, 68, 0.5);
+}
+.products .card .add-btn {
+  background: rgb(221, 142, 142);
+  background: linear-gradient(90deg, rgb(221, 142, 142) 0%, rgb(187, 119, 119) 31%, rgb(145, 76, 90) 100%);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(74, 40, 40);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.products .card .add-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*review section*/
+.review-div1 {
+  display: flex;
+}
+.review-div1 .review-heading {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  font-family: "Cinzel", serif;
+}
+
+.review-div2 {
+  display: flex;
+}
+.review-div2 form {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+.review-div2 form label {
+  margin-right: 1rem;
+}
+.review-div2 form textarea {
+  margin-right: 1rem;
+  width: 200px;
+  height: 100px;
+}
+.review-div2 form input[type=submit] {
+  margin-right: 1rem;
+  background: rgb(221, 142, 142);
+  background: linear-gradient(90deg, rgb(221, 142, 142) 0%, rgb(187, 119, 119) 31%, rgb(145, 76, 90) 100%);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(74, 40, 40);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.review-div2 form input[type=submit]:hover {
+  background-position: right center;
+  color: #fff;
+}
+
+/*email subscribtion section*/
+.email-div1 {
+  display: flex;
+}
+.email-div1 .email-heading {
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-family: "Cinzel", serif;
+}
+
+.email-div2 {
+  display: flex;
+  padding-bottom: 2rem;
+}
+.email-div2 label {
+  margin-left: 1rem;
+  margin-right: 0.2rem;
+}
+.email-div2 input[type=text] {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.email-div2 input[type=submit] {
+  margin-left: 1rem;
+  background: rgb(221, 142, 142);
+  background: linear-gradient(90deg, rgb(221, 142, 142) 0%, rgb(187, 119, 119) 31%, rgb(145, 76, 90) 100%);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(74, 40, 40);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.email-div2 input[type=submit]:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*-----footer-----*/
+footer {
+  background: rgb(221, 142, 142);
+  background: linear-gradient(90deg, rgb(221, 142, 142) 0%, rgb(187, 119, 119) 31%, rgb(145, 76, 90) 100%);
+  display: flex;
+}
+
+.about-nav {
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+
+.about-list li a {
+  color: rgb(74, 40, 40);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.about-list li a:hover {
+  color: rgb(236, 186, 186);
+}
+
+.contact-div {
+  margin-left: 30rem;
+  line-height: 2rem;
+  padding-top: 2rem;
+}
+
+.pages-div {
+  margin-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+
+.pages-list {
+  padding-top: 1rem;
+  padding-left: 0;
+}
+.pages-list li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+/*-----media query-----*/
+@media (max-width: 768px) {
+  * {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=newStyle.css.map */
